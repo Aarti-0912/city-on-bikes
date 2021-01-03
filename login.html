@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body{
+            background:rgb(122,136,129);
+        }   
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(240,239,234);
+            width: 400px;
+        }
+        .formheader{
+            line-height: 35px;
+            background:#ddd;
+        }
+        .formheader .btn{
+            display: inline;
+            margin: 10px 50px;
+            font-size: 20px;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background:#ddd ;
+            text-decoration: none;
+        }
+        .formcontent{
+            padding: 15px;
+        }
+        .formcontent .formelement{
+            padding: 2px;
+            width: 100%;
+        }
+        .formcontent .formelement input{
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .formcontent .formelement input[type="checkbox"]{
+            width: 35px;
+            margin-left: -3px;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .formcontent .form .formelement input[type="submit"]{
+            margin-top: 3%;
+            width: 90%;
+            background-color: rgb(122, 136, 129);
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        a{
+            text-decoration:none;
+            font-size:20px;
+            color:green;
+        }
+        .formheader .btn{
+            font-weight:bold;
+            font-size:26px;
+            padding:3px;
+            
+        }
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="formheader">
+            <a class="btn" href="{% url 'loginpage' %}">Login Here To Go Ahead</a>
+        </div>
+        <div class="formcontent">
+                <form method="POST">
+                    {% csrf_token %}
+                        <div class="formelement">
+                            Username<input type="text" name="sign_username">
+                        </div>
+                        <div class="formelement">
+                            Password<input type="password" name="sign_password">
+                        </div><br>
+                        <div class="formelement">
+                           <input style="margin-left:10px; background-color:red;"type="submit", value="Login" name="savelogin">
+                        </div>
+                        <hr>
+                        <p>Create a New Account? <a class="signbtn" href = "{% url 'signuppage'%}">Sign Up</a></p>
+                    {% if messages %}
+                    {% for msg in messages %}
+                    <b>{{msg}}</b>
+                    {% endfor %}
+                    {% endif %}
+                </form>
+        
+        </div>
+
+    </div>    
+    {% endblock %}
+</body>
+</html>

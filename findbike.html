@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.cob.findbike</title>
+    <style>
+    .checked 
+    {
+      color: orange;
+    }
+    p 
+    {
+      text-align:justify;
+      padding: 2px;
+    }
+    img{
+      padding-left:30px;
+      height:140px;
+      width:200px;
+    }
+    body
+    {
+      background-color: white;
+    }
+    .column
+    {
+      float: left;
+      width: 30%;
+      padding: 5px;
+      margin-bottom:90px;
+
+    }
+    .row: after
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    button{
+      border: 2px black bold;
+      background-color:black;
+      border-radius:5px;
+      margin-top:15px;
+      padding:4px;
+    }
+    .quickbtn{
+      border: 2px black bold;
+      background-color:black;
+      border-radius:5px;
+      margin-top:15px;
+      padding:4px;
+    }
+    a{
+      text-decoration:none;
+      font-size:22px;
+      color:white;
+    }
+    .quickbtn{
+      text-decoration:none;
+      font-size:22px;
+      color:white;
+    }
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+    
+    {% for i in prod %}
+    <div class = "row"> 
+      <div class = "column">  
+        <img src="/media/{{i.image}}" width="125" height="100" alt="img">
+        <p style="font-family:verdana; font-size:20px; font-weight:bold;">{{i.pro_name}}</p>
+        <h4 style="font-family:verdana; color:red;">Rs {{i.price}}/Per Day</h4>
+        <p>{{i.desc}}</p>
+        <h4 style="font-family:verdana;">Availability : {{i.available}}</h4>
+        <H3>LOCATION:</H3>
+        <select name = "city">
+          <option value = "a">--select--</option>
+          <option value = "b">Nahargarh Fort</option>
+          <option value = "c">World Trade Park</option>
+          <option value = "d">Railway Station</option>
+          <option value = "e">Hawa Mahal</option>
+          <option value = "f">Choki Dhani</option>
+        </select><br>
+        <button><a href="{% url 'bookingpage' %}" >Book</a></button>
+        {% comment %} <a href="/firstapp/products/{{i.id}}"><button class="quickbtn" id="{{i.id}}">Quick View</button></a> {% endcomment %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+  </body>
+</html>

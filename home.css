@@ -1,0 +1,100 @@
+body
+{
+    background-color:rgb(122, 136, 129);
+    color: white;
+}
+.navbar{
+    background-color:rgb(240,239,234);
+    border-radius: 20px;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float: left;
+    font-size: 20px;
+    list-style: none;
+    margin: 13px 20px;
+    outline: none;
+}
+.navbar li a{
+    padding:3px;
+    color: white;
+    text-decoration: none;
+}
+.logintbtn{
+    float: right;
+    position: absolute;
+    right: 260px;
+    top: 30px;
+}
+.logintbtn a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.search{
+    float:right;
+    color:white;
+    padding:12px 30px;
+
+}
+.navbar input{
+    border:2px solid black;
+    border-radius: 14px;
+    padding: 4px 20px;
+    width: 200px;
+}           
+.navbar ul li a:visited
+{
+    color:black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.navbar ul li a:hover{
+    color:rgb(122, 136 , 129);
+    text-align: center;
+}
+.container{
+    display:flex;
+    justify-content: center;
+}
+.tagline{
+    line-height: 43px;
+}
+.tagline h2{
+    position: absolute;
+    left: 450px;
+}
+.tagline{
+    color: black;
+}
+
+
+
+
+
+.bookingbtn{
+    /* margin: 300px; */
+    padding: 2px;
+    background-color: rgb(240,239,234);
+    position: absolute;
+    top: 200px;
+    border-radius: 10px;
+    border: black;
+    
+}
+.bookingbtn a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    padding: 3px;
+}
+.bookingbtn button{
+    outline: none;
+    border: none;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.cob\about us</title>
+    <style>
+    body{
+        background-color:#626567;
+    }
+    .content{
+        display:flex;
+        justify-content:center;
+    }
+    #content p{
+        color:black;
+        font-size:18px;
+        line-height:20px;
+        align:center;
+        font-family:"Times New Roman","Times","serif";
+        text-align:left;
+    }
+    h1{
+        display:flex;
+        justify-content:center;
+        font-weight:bold;
+    }
+    .tagline{
+        background-image:url("https://images.pexels.com/photos/104842/bmw-vehicle-ride-bike-104842.jpeg?cs=srgb&dl=pexels-pixabay-104842.jpg&fm=jpg");
+        background-size:100% 700px;
+        background-repeat:none;
+        line-height:35px;
+        height:425px;
+    }
+    .tagline h2{
+        font-family:"Courier",monospace;
+        position:absolute;
+        left:450px;
+    }
+    .tagline h3{
+        display:flex;
+        justify-content:center;
+        font-family:"Courier",monospace;
+    }
+    </style>    
+</head>
+<body>
+{% extends "base.html" %}
+    {% block content%}
+    <div class="container">
+        <h1>About Us</h1>
+        <div id="content">
+            <p>COB is a leading motorbike rental company that offers a diversified and exceptional 
+            range of two-wheelers on rent. Bike riders who have a spirit governed by an intense passion
+            to ride different bike have just landed in the right place. We are regarded as one of the 
+            best bike rental companies in Jaipur due to personlaized services and higher commitment levels.
+             We have a huge store of exclusive bikes where riders can choose to ride on an hourly basis.<br> You can go on a long ride and have an enjoyable trip for hours and hours by hiring
+            your favourites bike on rent. Our company offers competitive pricing and optimum quality 
+            bikes that provide an exquisite experience for all. We have a pool of bikes to suit various requirements
+            and specialization of customers. Our customer-oriented approach enables us to fulfill 
+            your distant dreams and serve beyond your expectations levels.</p>
+            <hr>
+            <div class="tagline">
+                <h2>RIDE UNLIMITED, FOR A FIXED PRICE</h2><br>
+                <h3>Rent from India's Largest Fleet of Mototcycles, Trusted by Millions</h3>
+            </div>
+
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

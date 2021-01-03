@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>first.html</title>
+		{% load static %}
+		<link rel = "stylesheet", href = "{% static 'css/base.css' %}">
+		</head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'aboutuspage'%}">About Us</a></li>
+                    <li><a href="{% url 'contactuspage'%}">Contact Us</a></li>
+                    <li><a href="{% url 'bookingpage'%}">Booking</a></li>
+                    <li><a href="{% url 'findbikepage'%}">Find Bike</a></li>
+                     <div class="logintbtn">
+                        <a href="{% url 'loginpage' %}">Login</a>
+                        <a href="{% url 'signuppage' %}">/ Sign Up</a>
+                    </div>
+                    <div class="search">
+                        <input type="search", id="input", placeholder="Search">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    </body>
+    </html>
+
+    {% block content %}
+
+
+    {% endblock %}

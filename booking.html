@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+	<style type="text/css">
+		body
+		{
+			background-image:url('https://images.pexels.com/photos/2044873/pexels-photo-2044873.jpeg?cs=srgb&dl=pexels-loifotos-2044873.jpg&fm=jpg');
+			background-repeat:none;
+			background-size:100% 100%;
+			
+		}
+		h1
+		{
+			color: black;
+			text-align: center;
+			font-size: 50px;
+			font-family: "Times New Roman", Times, serif;
+		}
+		#cone {color: red; font-family: "Lucida Console", Courier, monospace;}
+		.square
+		{
+			margin: auto;
+			background: #000;
+    		width: 70%;
+    		border: 3px solid yellow;
+    		padding: 10px;
+    		text-align: center;
+		}
+		.square h2
+		{
+			color: #fff
+		
+		}
+		
+		a: hover, a: active
+		{
+			background-color: black;
+			text-align: center;
+		}
+		.find a{
+			text-decoration:none;
+			font-size:26px;
+			color:red;
+			weight:bold;
+		}
+		input{
+			padding:5px;
+			width:30%
+		}
+		label{
+			font-size:18px;
+		}
+		.btn{
+			font-size:22px;
+			font-weight:bold;
+			margin:5px;
+		}
+			
+	</style>
+</head>
+<body align = "center">
+{% extends "base.html" %}
+{% block content %}
+	<h1>COB</h1>
+	<h2 id = "cone", align = "center">City On Bikes</h2><br>
+	<div class = "container">
+		<div class = "square">
+			<fieldset>
+				<form action = "/savedata/" method = "POST">
+
+					<h2 align = "center">Book your Ride</h2>	
+					
+					<label for name style = "color: white">Name</label>
+					<input type = "text" name = "name" size = "20"><br><br>
+
+					<label for name style = "color: white">Picking Up Date</label>
+					<input type = "date" name = "pdate" size = "20"><br><br>
+
+					<label for name style = "color: white">Picking Up Time</label>
+					<input type = "time" name = "ptime" size = "20"><br><br>
+
+					<label for name style = "color: white">Dropping Off Date</label>
+					<input type = "date" name = "ddate" size = "20"><br><br>
+
+					<label for name style = "color: white">Dropping Off Time</label>
+					<input type = "time" name = "dtime" size = "20"><br><br>
+
+					<label for name style = "color: white">Vehicle Name</label>
+					<input type = "text" name = "vname" size = "20"><br><br>
+					
+					<input class="btn" type = "submit" name = "savedata" value = "Next">
+					<input class="btn" type = "reset" name = "Cancel"><br><br>
+				<form>
+			</fieldset>
+		</div>
+	</div>
+	<br>
+	<div class="find">
+		<a href="{% url 'findbikepage' %}" target="_blank">Find Bikes</a>
+	</div>
+	{% endblock %}
+</body>
+</html>

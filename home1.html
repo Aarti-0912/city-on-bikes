@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>www.cob\home</title>
+		<style>
+            body
+            {
+               
+                color: white;
+                background-image:url('https://images.pexels.com/photos/1416169/pexels-photo-1416169.jpeg?cs=srgb&dl=pexels-djordje-petrovic-1416169.jpg&fm=jpg');
+                background-repeat:no-repeat;
+                background-size:100% 550px;
+            }
+            .container{
+                display:flex;
+                justify-content: center;
+            }
+            .tagline{
+                line-height: 43px;
+            }
+            .tagline h2{
+                position: absolute;
+                left: 450px;
+            }
+            .tagline{
+                color: black;
+            }
+            .bookingbtn{
+                padding: 2px;
+                background-color: black;
+                position: absolute;
+                top: 200px;
+                border-radius: 10px;
+                border: black;
+    
+            }
+            .bookingbtn a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+                padding: 3px;
+            }
+            .bookingbtn button{
+                outline: none;
+                border: none;
+                background-color:black;
+            }
+            .about{
+                position:absolute;
+                top:550px;
+                background-color:#626567;
+                left:0px;
+            }
+            .about h1{
+                left:30px;
+                color:white;
+                text-align:center;
+            }
+            .about p{
+                color:black;
+                left:4px;
+
+            }
+            .column{
+                float:left;
+                width:33%;
+                padding:2px;
+            }
+            .row::after{
+                content:"";
+                clear:both;
+                display:table;
+            }
+            footer{
+                position:absolute;
+                top:1059px;
+                background-color:#D5DBDB;
+                width:100%;
+                left:0px;
+
+            }
+            footer h2{
+                color:white;
+                text-align:center;
+                background-color:black;
+                padding:15px;
+            }
+            footer p{
+                color:black;
+                line-height:2px;
+            }
+            footer .copyright{
+                text-align:center;
+                color:gray;
+                font-size:18px;
+            }
+        </style>
+	</head>
+    <body>
+    {% extends "base.html" %}
+    {% block content %}
+    <section class="image">
+		<div class="container">
+            <div class="tagline">
+			    <h2>RIDE UNLIMITED, FOR A FIXED PRICE</h2><br>
+			    <h3>Rent from India's Largest Fleet of Motorcycles, Trusted by millions.</h3>
+            </div>
+            <div class="bookingbtn">
+                <button><a href="{% url 'bookingpage' %}">Book a Bike</a></button>
+		    </div>
+        </div>
+    </section>
+    <section class="about">
+        <h1>ABOUT US</h1>
+        <p>COB is a leading motorbike rental company that offers a diversified and         exceptional 
+            range of two-wheelers on rent. Bike riders who have a spirit governed by an intense passion
+            to ride different bike have just landed in the right place. We are regarded as one of the 
+            best bike rental companies in Jaipur due to personlaized services and higher commitment levels.
+             We have a huge store of exclusive bikes where riders can choose to ride on an hourly basis.<br> You can go on a long ride and have an enjoyable trip for hours and hours by hiring
+            your favourites bike on rent. Our company offers competitive pricing and optimum quality 
+            bikes that provide an exquisite experience for all. We have a pool of bikes to suit various requirements
+            and specialization of customers. Our customer-oriented approach enables us to fulfill 
+            your distant dreams and serve beyond your expectations levels.</p>
+            <div class="row">
+            <div class="column">
+                <img src="https://images.pexels.com/photos/296735/pexels-photo-296735.jpeg?cs=srgb&dl=pexels-albin-berlin-296735.jpg&fm=jpg" alt="img" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://images.pexels.com/photos/2611691/pexels-photo-2611691.jpeg?cs=srgb&dl=pexels-javier-aguilera-2611691.jpg&fm=jpg" alt="img" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://images.pexels.com/photos/159192/vespa-roller-motor-scooter-cult-159192.jpeg?cs=srgb&dl=pexels-pixabay-159192.jpg&fm=jpg" alt="img" style="width:100%">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h2> A wise traveler never despises his own country!!!</h2><hr>
+        <p> Support Phone: +91 8973375555, 97521345623, 8663565242</p><br>
+        <p> E Mails: services.cob@gmail.com</p><br>
+        <p> Working Hours: 9:00 AM To 8:00 PM</p><br>
+        <p class="copyright"> @Copyright 2020, All Rights Reserved</p>
+
+
+    </footer>
+           
+    {% endblock %}
+	
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.cob\contact</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		*
+		{
+			box-sizing:border-box;
+		}
+		body
+		{
+			background-color: #626567;
+		}
+		.column
+		{
+			float: left;
+			width: 33.33%;
+			padding: 15px;
+		}
+		.row: after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+		#aone {color: red;}
+		#atwo {color: green;}
+		.columns
+		{
+			float: left;
+			width: 50%;
+			padding: 15px;
+            line-height:25px;
+		}
+		.columncall{
+			width:70%;
+		}
+		.square
+		{
+			margin: auto;
+			background: rgb(240,239,234);
+    		width: 100%;
+    		border: 3px solid black;
+    		padding: 10px;
+			height:100%;
+    		text-align: center;
+		}
+		.square input{
+			width:50%;
+			padding:10px;
+			margin:10px;
+			font-size:16px;
+		}
+		#submitbtn{
+			background-color:green;
+			font-weight:bold;
+			font-size:20px;
+		}
+	
+	</style>
+</head>
+<body align = "center">
+{% extends "base.html" %}
+{% block content %}
+	{% comment %} <div class = "row">
+  		<div class = "column">
+    		<h2>Address</h2>
+    		<h3>Edit your address here</h3>
+    	</div>
+    	<div class = "column">
+    		<h2>Mail us at:</h2>
+    		<h3>services.cob@gmail.com</h3>
+    	</div>
+    	<div class = "column">
+    		<h2>Call us:</h2>
+    		<h3>+08844532178</h3>
+    		<p>Calling hours:</p>
+    		<p id = "aone">(09:00 am - 09:00 pm)</p>
+    	</div>
+    </div> {% endcomment %}
+    <div class = "row">
+  		<div class = "columns">
+  			<div class = "square">
+  				<fieldset>
+					<form name = "bookingform" action = "" method = "">
+
+						<h2 align = "center" id = "atwo">CONTACT FORM</h2>
+
+						<label for name>First Name</label>
+			            <input type = "text" name = "fname" size = "20"><br>
+
+			            <label for name>Last Name</label>
+			            <input type = "text" name = "lname" size = "20"><br>
+
+			            <label for name>Email Address</label>
+			            <input type = "email" name = "email" size = "20"><br>
+
+			            <label for name>Contact number</label>
+			            <input type = "tel" name = "num" placeholder="01234-56789" pattern="[0-9]{5}-[0-9]{5}" required><br>
+
+			            <label for name>Subject</label>
+			            <input type = "text" name = "sub" size = "20"><br>
+
+			            <label for name>Message</label>
+			            <textarea rows = "5" cols = "20"></textarea><br><br>
+
+						<input id="submitbtn" type="submit", value="SUBMIT">
+
+			        </form>
+			    </fieldset>
+			</div>
+		</div><br>
+		<div class = "columns" align = "center">
+			<br><br><br><br><br><br><br>
+			<h2 id="services" align = "center">We're here at your service, anytime!</h2>
+			<div class = "columncall">
+    		<h2>Call us:</h2>
+    		<h3>+08844532178</h3>
+    		<p>Calling hours:</p>
+    		<p id = "aone">(09:00 am - 09:00 pm)</p>
+    	</div>
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>

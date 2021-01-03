@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.cob.booking</title>
+    <style>
+    body{
+        background-color:#626567;
+    }
+    h2{
+        color:darkred;
+        padding-left:10px;
+    }
+    container{
+        border:black;
+    }
+    .info{
+        font-size:24px;
+        font-weight:bold;
+        line-height:10px;
+        margin-bottom:10px;
+        margin-left:10px;
+    }
+    label{
+        margin-left:10px;
+        font-size:20px;
+    }
+    img{
+        margin-top:20px;
+        margin-left:750px;
+        width:750px;
+        height:640px;
+    }
+    .imgcontainer{
+        margin-top:40px;
+        position:absolute;
+        top:20px;
+    }
+    .submit{
+        background-color:black;
+        color:white;
+        font-size:25px;
+        font-weight:bold;
+        margin-left:10px;
+        padding:6px;
+        margin-top:10px;
+        cursor:pointer;
+    }
+    </style>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <section>
+    <h2>Note - Time should be selected between 9:00 AM to 8:00 PM *</h2>
+    <div class="container">
+        <label>License Number:<label><br>
+        <input class="info" type="text" name="license"><br>
+        <label>Phone:</label><br>
+        <input class="info" type="text" name="mobno"><br>
+        <label>Email:</label><br>
+        <input class="info" type="email" name="email"><br>
+        <input class="submit" type="submit" name="" value="Pay Now"><br>
+    </div><span>
+    </section>
+    <div class="imgcontainer">
+        <img src="https://images.pexels.com/photos/104842/bmw-vehicle-ride-bike-104842.jpeg?cs=srgb&dl=pexels-pixabay-104842.jpg&fm=jpg" alt="img"></span>
+    </div>
+    {% endblock %}
+</body>
+</html>
